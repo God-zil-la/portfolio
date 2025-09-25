@@ -13,26 +13,20 @@
   <meta property="og:description" content="Projects in Python, Django, JavaScript – Code Institute (Merit).">
   <meta property="og:image" content="https://god-zil-la.github.io/portfolio/assets/images/portfolio.jpg">
   <meta property="og:type" content="website">
-
   <meta name="description"
     content="Portfolio of Hussein Elali – Full-Stack Web Developer (Code Institute, Merit). Projects in Python/Django/JS." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0b0b0c;
-      /* near-black */
       --panel: #111114;
-      /* panels */
       --text: #eaeaea;
-      /* body text */
       --muted: #b7b7b7;
-      /* secondary text */
       --gold: #d4af37;
-      /* gold accent */
       --gold-soft: #b9962b;
-      /* hover */
       --card: #141419;
       --ring: rgba(212, 175, 55, .35);
       --maxw: 1100px;
@@ -75,7 +69,7 @@
     }
 
     .nav.scrolled {
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .35)
     }
 
     .nav-wrap {
@@ -109,7 +103,7 @@
     }
 
     .links a.active {
-      color: var(--gold);
+      color: var(--gold)
     }
 
     .links a.active::after {
@@ -120,7 +114,7 @@
       bottom: -6px;
       height: 2px;
       background: var(--gold);
-      border-radius: 2px;
+      border-radius: 2px
     }
 
     .cta {
@@ -200,16 +194,22 @@
       color: var(--text);
       display: inline-flex;
       gap: 10px;
-      align-items: center
+      align-items: center;
+      transition: transform .15s ease, box-shadow .2s ease
     }
 
     .btn.primary {
       border-color: var(--gold);
-      background: linear-gradient(180deg, rgba(212, 175, 55, .12), rgba(212, 175, 55, .05))
+      background: linear-gradient(180deg, rgba(212, 175, 55, .12), rgba(212, 175, 55, .05));
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, .4)
     }
 
     .btn:hover {
       transform: translateY(-1px)
+    }
+
+    .btn.primary:hover {
+      box-shadow: 0 6px 18px rgba(212, 175, 55, .12)
     }
 
     .hero-bio {
@@ -282,7 +282,13 @@
       overflow: hidden;
       box-shadow: var(--shadow);
       display: flex;
-      flex-direction: column
+      flex-direction: column;
+      transition: transform .18s ease, box-shadow .18s ease
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, .35)
     }
 
     .card img {
@@ -390,38 +396,23 @@
       display: none !important
     }
 
-    /* --- Enhancements --- */
-    .links a.active {
-      color: var(--gold);
-    }
-
-    .links a.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -6px;
-      height: 2px;
-      background: var(--gold);
-      border-radius: 2px;
-    }
-
+    /* Enhancements */
     .reveal {
       opacity: 0;
       transform: translateY(14px);
-      transition: opacity .5s ease, transform .5s ease;
+      transition: opacity .5s ease, transform .5s ease
     }
 
     .reveal.in {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0)
     }
 
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         transition: none;
         transform: none;
-        opacity: 1;
+        opacity: 1
       }
     }
 
@@ -438,12 +429,12 @@
       color: var(--text);
       padding: 10px 12px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 600
     }
 
     #toTop.show {
       opacity: 1;
-      pointer-events: auto;
+      pointer-events: auto
     }
   </style>
 </head>
@@ -526,9 +517,8 @@
         <div class="body">
           <h3>PrintNest (3D Printing Website)</h3>
           <p data-i18n="p1_desc">Multilingual responsive single-page site with dynamic language switching (EN/SV).</p>
-          <div class="stack">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-          </div>
+          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
+              class="chip">JavaScript</span></div>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/God-zil-la/my-first-project" target="_blank"
@@ -545,9 +535,8 @@
         <div class="body">
           <h3>Memory Game</h3>
           <p data-i18n="p2_desc">Interactive card-matching game for the browser. Mobile-friendly.</p>
-          <div class="stack">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-          </div>
+          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
+              class="chip">JavaScript</span></div>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/God-zil-la/Memory-Game" target="_blank"
@@ -564,9 +553,8 @@
         <div class="body">
           <h3>Event Planner (Django)</h3>
           <p data-i18n="p3_desc">CRUD event app with authentication and Google Calendar sync.</p>
-          <div class="stack">
-            <span class="chip">Python</span><span class="chip">Django</span><span class="chip">PostgreSQL</span>
-          </div>
+          <div class="stack"><span class="chip">Python</span><span class="chip">Django</span><span
+              class="chip">PostgreSQL</span></div>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/God-zil-la/Event-Planner" target="_blank"
@@ -583,10 +571,8 @@
         <div class="body">
           <h3>AI Assistant Platform</h3>
           <p data-i18n="p4_desc">SaaS app with OpenAI, Stripe subscriptions, analytics dashboard & Discord bot.</p>
-          <div class="stack">
-            <span class="chip">Python</span><span class="chip">Django</span><span class="chip">Stripe</span><span
-              class="chip">OpenAI</span>
-          </div>
+          <div class="stack"><span class="chip">Python</span><span class="chip">Django</span><span
+              class="chip">Stripe</span><span class="chip">OpenAI</span></div>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/God-zil-la/ai-assistant" target="_blank"
@@ -603,9 +589,8 @@
         <div class="body">
           <h3>Developer Portfolio</h3>
           <p data-i18n="p5_desc">Personal portfolio with projects, skills and contact. This site!</p>
-          <div class="stack">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-          </div>
+          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
+              class="chip">JavaScript</span></div>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/God-zil-la/portfolio" target="_blank"
@@ -621,20 +606,12 @@
   <section id="skills" aria-labelledby="skills-title">
     <h2 id="skills-title" data-i18n="skills_title">Skills</h2>
     <div class="skills">
-      <span class="chip">Python</span>
-      <span class="chip">Django</span>
-      <span class="chip">Flask</span>
-      <span class="chip">JavaScript</span>
-      <span class="chip">HTML5</span>
-      <span class="chip">CSS3</span>
-      <span class="chip">SQL</span>
-      <span class="chip">Git & GitHub</span>
-      <span class="chip">REST APIs</span>
-      <span class="chip">Responsive Design</span>
-      <span class="chip">Stripe</span>
-      <span class="chip">OpenAI</span>
-      <span class="chip">Testing</span>
-      <span class="chip">Accessibility</span>
+      <span class="chip">Python</span><span class="chip">Django</span><span class="chip">Flask</span><span
+        class="chip">JavaScript</span>
+      <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">SQL</span><span class="chip">Git &
+        GitHub</span>
+      <span class="chip">REST APIs</span><span class="chip">Responsive Design</span><span class="chip">Stripe</span>
+      <span class="chip">OpenAI</span><span class="chip">Testing</span><span class="chip">Accessibility</span>
     </div>
   </section>
 
@@ -652,10 +629,15 @@
           <a href="https://github.com/God-zil-la" target="_blank" rel="noopener noreferrer">💻 github.com/God-zil-la</a>
         </div>
       </div>
+
       <div class="panel reveal">
-        <p class="sub" data-i18n="cv_hint">Need a CV? Download the English & Swedish versions from LinkedIn Featured or
-          contact me.</p>
+        <p class="sub" data-i18n="cv_hint">Need a CV? Download the English & Swedish versions below or find them on my
+          LinkedIn Featured.</p>
         <div class="list">
+          <div>
+            <a class="btn primary" href="assets/cv/cv-en.pdf" download>Download CV (EN)</a>
+            <a class="btn" href="assets/cv/cv-sv.pdf" download>Download CV (SV)</a>
+          </div>
           <span>📍 Lund, Sweden</span>
           <span>🚘 A & B Driving License (BE in progress)</span>
           <span>🌐 Swedish · English · Arabic</span>
@@ -675,7 +657,7 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple i18n (EN / SV)
+    // i18n dictionary
     const dict = {
       en: {
         nav_about: 'About', nav_projects: 'Projects', nav_skills: 'Skills', nav_contact: 'Contact',
@@ -721,6 +703,7 @@
       }
     };
 
+    // language switcher
     function setLang(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const k = el.getAttribute('data-i18n');
@@ -736,10 +719,9 @@
     document.getElementById('btn-sv').addEventListener('click', () => setLang('sv'));
     setLang(localStorage.getItem('lang') || 'en');
 
-    // ---- Enhancements ----
+    // Enhancements
     const nav = document.querySelector('.nav');
     const toTop = document.getElementById('toTop');
-
     const onScroll = () => {
       const y = window.scrollY || document.documentElement.scrollTop;
       nav.classList.toggle('scrolled', y > 10);
@@ -765,10 +747,7 @@
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) sectionObserver.observe(el);
-    });
+    sections.forEach(id => { const el = document.getElementById(id); if (el) sectionObserver.observe(el); });
 
     // Reveal-on-scroll
     const reveals = document.querySelectorAll('.reveal');
