@@ -187,29 +187,46 @@
       flex-wrap: wrap
     }
 
+    /* Universal Gold Buttons */
     .btn {
-      border: 1px solid rgba(255, 255, 255, .1);
+      border: 1px solid var(--gold);
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.12));
+      color: var(--text);
       padding: 10px 14px;
       border-radius: 12px;
-      color: var(--text);
       display: inline-flex;
-      gap: 10px;
       align-items: center;
-      transition: transform .15s ease, box-shadow .2s ease
+      justify-content: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.25);
     }
 
-    .btn.primary {
-      border-color: var(--gold);
-      background: linear-gradient(180deg, rgba(212, 175, 55, .12), rgba(212, 175, 55, .05));
-      box-shadow: 0 0 0 0 rgba(212, 175, 55, .4)
-    }
-
+    /* Hover effect */
     .btn:hover {
-      transform: translateY(-1px)
+      transform: translateY(-1px);
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.2));
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.25);
+    }
+
+    /* Optional: Slightly brighter version for primary buttons (like “Download CV EN”) */
+    .btn.primary {
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.18));
+      color: var(--text);
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
     }
 
     .btn.primary:hover {
-      box-shadow: 0 6px 18px rgba(212, 175, 55, .12)
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.45), rgba(212, 175, 55, 0.25));
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Focus effect for accessibility */
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px var(--ring);
     }
 
     .hero-bio {
@@ -635,13 +652,18 @@
       </div>
 
       <div class="panel reveal">
-        <p class="sub" data-i18n="cv_hint">Need a CV? Download the English & Swedish versions below or find them on my
-          LinkedIn Featured.</p>
+        <p class="sub" data-i18n="cv_hint">
+          Need a CV? Download the English & Swedish versions below or find them on my LinkedIn Featured.
+        </p>
+
         <div class="list">
+          <!-- CV-länkar -->
           <div>
             <a class="btn primary" href="assets/cv/cv-en.pdf" download>Download CV (EN)</a>
             <a class="btn" href="assets/cv/cv-sv.pdf" download>Download CV (SV)</a>
           </div>
+
+          <!-- Cover letter-länkar -->
           <div style="margin-top:12px">
             <a class="btn primary" href="assets/documents/cover-letter.pdf" download>
               Download Cover Letter (EN)
@@ -650,10 +672,15 @@
               Ladda ner Personligt Brev (SV)
             </a>
           </div>
+
+          <!-- Diplom -->
           <div>
-            <a class="btn" href="assets/documents/code-institute-diploma.pdf" download data-i18n="edu_diploma_btn">View
-              diploma (PDF)</a>
+            <a class="btn" href="assets/documents/code-institute-diploma.pdf" download data-i18n="edu_diploma_btn">
+              View diploma (PDF)
+            </a>
           </div>
+
+          <!-- Info -->
           <span>📍 Lund, Sweden</span>
           <span>🚘 A & B Driving License (BE in progress)</span>
           <span>🌐 Swedish · English · Arabic</span>
