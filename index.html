@@ -4,808 +4,2731 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hussein Elali – Full-Stack Web Developer</title>
 
-  <!-- Meta & favicon -->
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <meta name="theme-color" content="#0b0b0c">
-  <meta property="og:title" content="Hussein Elali – Full-Stack Web Developer">
-  <meta property="og:description" content="Projects in Python, Django, JavaScript – Code Institute (Merit).">
-  <meta property="og:image" content="https://god-zil-la.github.io/portfolio/assets/images/portfolio.jpg">
-  <meta property="og:type" content="website">
-  <meta name="description"
-    content="Portfolio of Hussein Elali – Full-Stack Web Developer (Code Institute, Merit). Projects in Python/Django/JS." />
+  <title>Hussein Elali | Full-Stack Developer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Portfolio of Hussein Elali, a full-stack developer building production web applications, SaaS products and AI-powered tools with Python, Django, JavaScript, React and APIs."
+  />
+
+  <meta name="theme-color" content="#080a0f" />
+
+  <meta property="og:title" content="Hussein Elali | Full-Stack Developer" />
+  <meta
+    property="og:description"
+    content="Full-stack developer building production web applications, SaaS products and AI-powered tools."
+  />
+  <meta
+    property="og:image"
+    content="https://god-zil-la.github.io/portfolio/assets/images/portfolio.jpg"
+  />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
-      --bg: #0b0b0c;
-      --panel: #111114;
-      --text: #eaeaea;
-      --muted: #b7b7b7;
+      --bg: #080a0f;
+      --bg-soft: #0d1017;
+      --panel: #11151e;
+      --panel-light: #151a24;
+
+      --text: #f4f6f8;
+      --muted: #9ca6b5;
+      --muted-light: #c5cbd4;
+
       --gold: #d4af37;
-      --gold-soft: #b9962b;
-      --card: #141419;
-      --ring: rgba(212, 175, 55, .35);
-      --maxw: 1100px;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+      --gold-light: #f1d87b;
+      --gold-dark: #9f7f20;
+
+      --border: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(212, 175, 55, 0.32);
+
+      --max-width: 1180px;
+
+      --radius-sm: 10px;
+      --radius: 18px;
+      --radius-lg: 26px;
+
+      --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+      --shadow-soft:
+        0 10px 35px rgba(0, 0, 0, 0.22);
     }
 
     * {
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #0b0b0c, #0e0e12 60%, #0b0b0c);
-      color: var(--text)
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(212, 175, 55, 0.08),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 35%,
+          rgba(84, 116, 255, 0.06),
+          transparent 30%
+        ),
+        var(--bg);
+
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     a {
-      color: var(--gold);
-      text-decoration: none
+      color: inherit;
+      text-decoration: none;
     }
 
-    a:hover {
-      color: var(--gold-soft)
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
 
-    /* Header / Nav */
+    ::selection {
+      background: var(--gold);
+      color: #090909;
+    }
+
+    /* --------------------------------------------------
+       LAYOUT
+    -------------------------------------------------- */
+
+    .container {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--gold-light);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+
+      font-size: clamp(2.7rem, 6vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    h3 {
+      line-height: 1.25;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* --------------------------------------------------
+       NAVIGATION
+    -------------------------------------------------- */
+
     .nav {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(11, 11, 12, .7);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, .06)
+      z-index: 100;
+
+      background: rgba(8, 10, 15, 0.76);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid transparent;
+
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .nav.scrolled {
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .35)
+      border-color: var(--border);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
     }
 
-    .nav-wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
+    .nav-inner {
+      width: min(var(--max-width), calc(100% - 36px));
+      min-height: 74px;
+
+      margin-inline: auto;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 18px
+      gap: 28px;
     }
 
     .brand {
+      font-size: 1rem;
       font-weight: 800;
-      letter-spacing: .4px
+      letter-spacing: -0.02em;
+      white-space: nowrap;
     }
 
-    .brand b {
-      color: var(--gold)
+    .brand span {
+      color: var(--gold);
     }
 
-    .links {
+    .nav-right {
       display: flex;
-      gap: 18px;
-      flex-wrap: wrap
+      align-items: center;
+      gap: 24px;
     }
 
-    .links a {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      color: var(--muted-light);
+
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: .95rem;
-      position: relative
+
+      transition: color 0.2s ease;
     }
 
-    .links a.active {
-      color: var(--gold)
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
     }
 
-    .links a.active::after {
+    .nav-links a::after {
       content: "";
+
       position: absolute;
       left: 0;
-      right: 0;
-      bottom: -6px;
+      right: 100%;
+      bottom: -8px;
+
       height: 2px;
+
       background: var(--gold);
-      border-radius: 2px
+
+      transition: right 0.2s ease;
     }
 
-    .cta {
-      border: 1px solid var(--gold);
-      padding: 8px 14px;
-      border-radius: 999px
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      right: 0;
     }
 
     .lang-toggle {
       display: flex;
-      gap: 8px;
-      align-items: center
+      align-items: center;
+
+      padding: 3px;
+
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 999px;
     }
 
     .lang-toggle button {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, .15);
-      color: var(--text);
+      border: 0;
+      border-radius: 999px;
+
       padding: 6px 10px;
-      border-radius: 10px;
-      cursor: pointer
+
+      background: transparent;
+      color: var(--muted);
+
+      font-family: inherit;
+      font-weight: 700;
+
+      cursor: pointer;
     }
 
     .lang-toggle button.active {
-      border-color: var(--gold);
-      color: var(--gold)
+      background: var(--gold);
+      color: #0b0b0b;
     }
 
-    /* Hero */
-    .hero {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 64px 18px 48px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 32px;
-      align-items: center
-    }
+    /* --------------------------------------------------
+       BUTTONS
+    -------------------------------------------------- */
 
-    .hero-card {
-      background: linear-gradient(180deg, #121218, #0f0f13);
-      border: 1px solid rgba(255, 255, 255, .06);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow)
-    }
-
-    .kicker {
-      color: var(--gold);
-      font-weight: 700;
-      letter-spacing: .1em;
-      font-size: .8rem;
-      text-transform: uppercase
-    }
-
-    h1 {
-      margin: .4rem 0 1rem;
-      font-size: clamp(1.8rem, 3vw, 2.6rem)
-    }
-
-    .lead {
-      color: var(--muted);
-      line-height: 1.65
-    }
-
-    .hero-actions {
-      margin-top: 22px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap
-    }
-
-    /* Universal Gold Buttons */
     .btn {
-      border: 1px solid var(--gold);
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.12));
-      color: var(--text);
-      padding: 10px 14px;
-      border-radius: 12px;
+      min-height: 46px;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      font-weight: 600;
-      transition: all 0.25s ease;
-      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.25);
-    }
+      gap: 9px;
 
-    /* Hover effect */
-    .btn:hover {
-      transform: translateY(-1px);
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.2));
-      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.25);
-    }
+      padding: 10px 17px;
 
-    /* Optional: Slightly brighter version for primary buttons (like “Download CV EN”) */
-    .btn.primary {
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.18));
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+
+      background: rgba(212, 175, 55, 0.05);
+
       color: var(--text);
-      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
-    .btn.primary:hover {
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.45), rgba(212, 175, 55, 0.25));
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+    .btn:hover {
       transform: translateY(-2px);
+
+      background: rgba(212, 175, 55, 0.1);
+      border-color: var(--gold);
+
+      box-shadow: 0 10px 28px rgba(212, 175, 55, 0.1);
     }
 
-    /* Focus effect for accessibility */
-    .btn:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 4px var(--ring);
+    .btn-primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      border-color: transparent;
+
+      color: #101010;
     }
 
-    .hero-bio {
-      display: grid;
-      gap: 10px
+    .btn-primary:hover {
+      background:
+        linear-gradient(
+          135deg,
+          #f7e29a,
+          var(--gold)
+        );
+
+      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.2);
     }
 
-    .meta {
+    .btn-secondary {
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+      min-height: calc(100vh - 74px);
+
       display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: .95rem
+      align-items: center;
+
+      padding: 80px 0 100px;
     }
 
-    .badge {
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero-title-accent {
+      display: block;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      max-width: 680px;
+
+      margin-bottom: 28px;
+
+      color: var(--muted-light);
+
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .meta-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--card);
-      border: 1px solid rgba(255, 255, 255, .06);
+      gap: 7px;
+
+      padding: 7px 11px;
+
+      background: rgba(255, 255, 255, 0.025);
+
+      border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 6px 10px
-    }
 
-    /* Sections */
-    section {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 42px 18px
-    }
-
-    section h2 {
-      font-size: 1.6rem;
-      margin: 0 0 16px
-    }
-
-    .sub {
       color: var(--muted);
-      margin: 0 0 18px
+
+      font-size: 0.82rem;
+      font-weight: 600;
     }
 
-    /* Projects */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px
+    .availability-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #55d68b;
+
+      box-shadow: 0 0 12px rgba(85, 214, 139, 0.65);
     }
 
-    @media (max-width:1000px) {
-      .hero {
-        grid-template-columns: 1fr
-      }
+    /* Hero card */
 
-      .grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
+    .hero-profile {
+      position: relative;
 
-    @media (max-width:650px) {
-      .grid {
-        grid-template-columns: 1fr
-      }
-    }
+      padding: 26px;
 
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255, 255, 255, .08);
-      border-radius: var(--radius);
-      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.055),
+          rgba(255, 255, 255, 0.015)
+        );
+
       box-shadow: var(--shadow);
+    }
+
+    .hero-profile::before {
+      content: "";
+
+      position: absolute;
+      inset: -1px;
+
+      border-radius: inherit;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212, 175, 55, 0.28),
+          transparent 35%,
+          transparent 70%,
+          rgba(212, 175, 55, 0.08)
+        );
+
+      z-index: -1;
+    }
+
+    .profile-label {
+      color: var(--gold-light);
+
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+    .profile-title {
+      margin-bottom: 12px;
+
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .profile-text {
+      color: var(--muted);
+
+      font-size: 0.94rem;
+      line-height: 1.7;
+
+      margin-bottom: 24px;
+    }
+
+    .profile-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .profile-stat {
+      padding: 14px;
+
+      background: rgba(0, 0, 0, 0.18);
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .profile-stat strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: var(--gold-light);
+
+      font-size: 0.86rem;
+    }
+
+    .profile-stat span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* --------------------------------------------------
+       ABOUT
+    -------------------------------------------------- */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+    }
+
+    .panel {
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      padding: 28px;
+
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-copy p {
+      color: var(--muted-light);
+      line-height: 1.8;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .education-item {
+      padding-bottom: 20px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .education-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .education-item span {
+      color: var(--muted);
+
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    /* --------------------------------------------------
+       FEATURED PROJECT
+    -------------------------------------------------- */
+
+    .featured-project {
+      position: relative;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+
+      background:
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(212, 175, 55, 0.12),
+          transparent 35%
+        ),
+        var(--panel);
+
+      box-shadow: var(--shadow);
+    }
+
+    .featured-project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 530px;
+    }
+
+    .featured-content {
+      padding: clamp(28px, 5vw, 54px);
+
       display: flex;
       flex-direction: column;
-      transition: transform .18s ease, box-shadow .18s ease
+      justify-content: center;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, .35)
+    .featured-badge {
+      width: fit-content;
+
+      margin-bottom: 18px;
+
+      padding: 6px 10px;
+
+      color: var(--gold-light);
+
+      background: rgba(212, 175, 55, 0.08);
+
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 999px;
+
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
-    .card img {
+    .featured-content h3 {
+      margin-bottom: 16px;
+
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.045em;
+    }
+
+    .featured-content > p {
+      color: var(--muted-light);
+
+      line-height: 1.75;
+
+      margin-bottom: 22px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+
+      margin: 0 0 26px;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .feature-list li {
+      position: relative;
+
+      padding-left: 18px;
+
+      color: var(--muted-light);
+
+      font-size: 0.88rem;
+    }
+
+    .feature-list li::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .featured-visual {
+      min-height: 440px;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212, 175, 55, 0.06),
+          rgba(255, 255, 255, 0.01)
+        );
+
+      border-left: 1px solid var(--border);
+    }
+
+    .featured-visual img {
       width: 100%;
-      height: 170px;
+      max-height: 470px;
+
       object-fit: cover;
-      background: #0c0c10
+      object-position: top;
+
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 14px;
+
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
     }
 
-    .card .body {
-      padding: 16px
+    .featured-fallback {
+      position: absolute;
+      inset: 30px;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #121823,
+          #0a0d13
+        );
+
+      color: var(--gold-light);
+
+      font-weight: 800;
+      text-align: center;
     }
 
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 1.1rem
+    .featured-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-bottom: 25px;
+    }
+
+    /* --------------------------------------------------
+       CHIPS
+    -------------------------------------------------- */
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 6px 10px;
+
+      border: 1px solid var(--border);
+      border-radius: 999px;
+
+      background: rgba(255, 255, 255, 0.025);
+
+      color: var(--muted);
+
+      font-size: 0.77rem;
+      font-weight: 600;
+    }
+
+    .chip-gold {
+      border-color: rgba(212, 175, 55, 0.25);
+
+      background: rgba(212, 175, 55, 0.05);
+
+      color: var(--gold-light);
+    }
+
+    /* --------------------------------------------------
+       OTHER PROJECTS
+    -------------------------------------------------- */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow-soft);
+
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(212, 175, 55, 0.25);
+
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32);
+    }
+
+    .project-image {
+      height: 220px;
+
+      overflow: hidden;
+
+      background: var(--bg-soft);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.025);
+    }
+
+    .project-body {
+      flex: 1;
+
+      padding: 24px;
+    }
+
+    .project-body h3 {
+      margin-bottom: 10px;
+
+      font-size: 1.25rem;
+      letter-spacing: -0.025em;
+    }
+
+    .project-body p {
+      color: var(--muted);
+
+      line-height: 1.7;
+
+      margin-bottom: 18px;
     }
 
     .stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0
+      gap: 7px;
     }
 
-    .chip {
-      border: 1px solid rgba(255, 255, 255, .1);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: .8rem;
-      color: var(--muted)
+    .project-card .project-actions {
+      padding: 0 24px 24px;
     }
 
-    .actions {
-      margin-top: auto;
-      display: flex;
-      gap: 10px;
-      padding: 12px 16px;
-      border-top: 1px solid rgba(255, 255, 255, .06);
-      background: linear-gradient(180deg, #121218, #0f0f13)
+    /* --------------------------------------------------
+       SKILLS
+    -------------------------------------------------- */
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .actions a {
-      flex: 1;
-      text-align: center
+    .skill-group {
+      padding: 25px;
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
     }
 
-    /* Skills */
+    .skill-group h3 {
+      margin-bottom: 16px;
+
+      color: var(--gold-light);
+
+      font-size: 1rem;
+    }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px
+      gap: 8px;
     }
 
-    .skills .chip {
-      border-color: var(--gold);
-      color: var(--gold)
-    }
+    /* --------------------------------------------------
+       CONTACT
+    -------------------------------------------------- */
 
-    /* Contact */
-    .contact {
+    .contact-shell {
+      position: relative;
+
+      overflow: hidden;
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+
+      padding: clamp(30px, 5vw, 52px);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212, 175, 55, 0.1),
+          rgba(255, 255, 255, 0.02)
+        ),
+        var(--panel);
+
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow);
     }
 
-    @media (max-width:800px) {
-      .contact {
-        grid-template-columns: 1fr
-      }
+    .contact-shell h2 {
+      margin-bottom: 12px;
     }
 
-    .panel {
-      background: var(--panel);
-      border: 1px solid rgba(255, 255, 255, .06);
-      border-radius: var(--radius);
-      padding: 18px
+    .contact-shell p {
+      max-width: 670px;
+
+      color: var(--muted-light);
+
+      margin-bottom: 0;
     }
 
-    .list {
-      display: grid;
-      gap: 10px
-    }
-
-    .list a {
-      display: inline-flex;
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
-      align-items: center
+
+      justify-content: flex-end;
     }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, .06);
-      padding: 20px 18px;
+    .contact-details {
+      margin-top: 22px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+    }
+
+    .contact-details a,
+    .contact-details span {
       color: var(--muted);
-      text-align: center
+
+      font-size: 0.88rem;
+      font-weight: 600;
     }
 
-    /* Utilities */
-    .ring {
-      box-shadow: 0 0 0 4px var(--ring)
+    .contact-details a:hover {
+      color: var(--gold-light);
     }
 
-    .hidden {
-      display: none !important
+    .downloads {
+      margin-top: 18px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
     }
 
-    /* Enhancements */
-    .reveal {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity .5s ease, transform .5s ease
+    /* --------------------------------------------------
+       FOOTER
+    -------------------------------------------------- */
+
+    footer {
+      margin-top: 30px;
+
+      padding: 26px 18px;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      text-align: center;
+      font-size: 0.82rem;
     }
 
-    .reveal.in {
-      opacity: 1;
-      transform: translateY(0)
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        transition: none;
-        transform: none;
-        opacity: 1
-      }
-    }
+    /* --------------------------------------------------
+       BACK TO TOP
+    -------------------------------------------------- */
 
     #toTop {
       position: fixed;
-      right: 16px;
-      bottom: 18px;
-      z-index: 60;
+      right: 20px;
+      bottom: 20px;
+      z-index: 80;
+
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--border-gold);
+      border-radius: 50%;
+
+      background: rgba(17, 21, 30, 0.92);
+      backdrop-filter: blur(10px);
+
+      color: var(--gold-light);
+
+      font-family: inherit;
+      font-size: 1.1rem;
+
+      cursor: pointer;
+
       opacity: 0;
-      pointer-events: none;
-      transition: opacity .25s ease;
-      background: linear-gradient(180deg, rgba(212, 175, 55, .12), rgba(212, 175, 55, .05));
-      border: 1px solid var(--gold);
-      color: var(--text);
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-weight: 600
+      visibility: hidden;
+
+      transform: translateY(8px);
+
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
     }
 
     #toTop.show {
       opacity: 1;
-      pointer-events: auto
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* --------------------------------------------------
+       REVEAL
+    -------------------------------------------------- */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+
+      transition:
+        opacity 0.55s ease,
+        transform 0.55s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --------------------------------------------------
+       ACCESSIBILITY
+    -------------------------------------------------- */
+
+    :focus-visible {
+      outline: 3px solid rgba(212, 175, 55, 0.55);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* --------------------------------------------------
+       RESPONSIVE
+    -------------------------------------------------- */
+
+    @media (max-width: 1000px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero-profile {
+        max-width: 620px;
+      }
+
+      .featured-project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-visual {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .skills-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      section {
+        padding: 68px 0;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 0 70px;
+      }
+
+      .about-grid,
+      .projects-grid,
+      .skills-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-content {
+        padding: 28px 22px;
+      }
+
+      .featured-visual {
+        min-height: 330px;
+        padding: 20px;
+      }
+
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .project-image {
+        height: 190px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container,
+      .nav-inner {
+        width: min(100% - 26px, var(--max-width));
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 13vw, 3.6rem);
+      }
+
+      .hero-actions,
+      .project-actions,
+      .contact-actions,
+      .downloads {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn,
+      .project-actions .btn,
+      .contact-actions .btn,
+      .downloads .btn {
+        width: 100%;
+      }
+
+      .hero-profile,
+      .panel,
+      .skill-group {
+        padding: 21px;
+      }
+
+      .featured-visual {
+        min-height: 270px;
+      }
+
+      .contact-shell {
+        padding: 26px 21px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="nav" aria-label="Primary">
-    <div class="nav-wrap">
-      <div class="brand">Hussein <b>Elali</b></div>
-      <div class="links">
-        <a href="#about" data-i18n="nav_about">About</a>
-        <a href="#projects" data-i18n="nav_projects">Projects</a>
-        <a href="#skills" data-i18n="nav_skills">Skills</a>
-        <a href="#contact" class="cta" data-i18n="nav_contact">Contact</a>
-      </div>
-      <div class="lang-toggle" aria-label="Language switcher">
-        <button id="btn-en" class="active" aria-pressed="true">EN</button>
-        <button id="btn-sv" aria-pressed="false">SV</button>
+
+  <!-- ==================================================
+       NAVIGATION
+  =================================================== -->
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+
+      <a href="#top" class="brand" aria-label="Hussein Elali home">
+        Hussein <span>Elali</span>
+      </a>
+
+      <div class="nav-right">
+
+        <div class="nav-links">
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#projects" data-i18n="nav_projects">Projects</a>
+          <a href="#skills" data-i18n="nav_skills">Skills</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </div>
+
+        <div class="lang-toggle" aria-label="Language switcher">
+          <button
+            id="btn-en"
+            class="active"
+            aria-pressed="true"
+            type="button"
+          >
+            EN
+          </button>
+
+          <button
+            id="btn-sv"
+            aria-pressed="false"
+            type="button"
+          >
+            SV
+          </button>
+        </div>
+
       </div>
     </div>
   </nav>
 
-  <!-- HERO / INTRO -->
+  <!-- ==================================================
+       HERO
+  =================================================== -->
+
   <header class="hero" id="top">
-    <div class="hero-card reveal">
-      <div class="kicker" data-i18n="kicker">Full-Stack Web Developer</div>
-      <h1>Hussein Elali</h1>
-      <p class="lead" data-i18n="lead">
-        Diploma in Full Stack Web Development (Code Institute, final grade: Merit). I build responsive, scalable apps
-        with Python (Django/Flask), JavaScript, and SQL. Projects validated by Code Institute examiners.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects" data-i18n="view_projects">View projects</a>
-        <a class="btn" href="https://github.com/God-zil-la" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/hussein-elali" target="_blank"
-          rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-    <div class="hero-bio">
-      <div class="meta">
-        <span class="badge">Lund, Sweden</span>
-        <span class="badge">Swedish · English · Arabic</span>
-        <span class="badge">A & B Driving License</span>
-      </div>
-      <div class="panel reveal">
-        <h2 id="about" style="margin-top:0" data-i18n="about_title">About</h2>
-        <p data-i18n="about_body">
-          I’m a hands-on developer with a strong technical service background. I like building practical solutions:
-          event apps, AI-assisted tools, and clean user interfaces. I learn fast, adapt quickly, and enjoy shipping real
-          features.
+    <div class="container hero-grid">
+
+      <div class="hero-copy reveal">
+
+        <div class="eyebrow" data-i18n="hero_eyebrow">
+          Full-Stack Developer
+        </div>
+
+        <h1>
+          Hussein Elali
+          <span
+            class="hero-title-accent"
+            data-i18n="hero_title"
+          >
+            I build products for the real world.
+          </span>
+        </h1>
+
+        <p
+          class="hero-lead"
+          data-i18n="hero_lead"
+        >
+          Full-stack developer focused on building production-ready
+          web applications, SaaS platforms and AI-powered products
+          with Python, Django, JavaScript, React and modern APIs.
         </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="#projects"
+            data-i18n="hero_projects"
+          >
+            Explore my work
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/God-zil-la"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://linkedin.com/in/hussein-elali"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+        </div>
+
+        <div class="hero-meta">
+
+          <span class="meta-pill">
+            <span class="availability-dot"></span>
+            <span data-i18n="hero_location">
+              Lund, Sweden
+            </span>
+          </span>
+
+          <span
+            class="meta-pill"
+            data-i18n="hero_languages"
+          >
+            Swedish · English · Arabic
+          </span>
+
+          <span
+            class="meta-pill"
+            data-i18n="hero_focus"
+          >
+            Full Stack · SaaS · AI
+          </span>
+
+        </div>
+
       </div>
-      <div class="panel reveal">
-        <h3 style="margin-top:0" data-i18n="edu_title">Education</h3>
-        <ul class="list" style="margin-top:8px">
-          <li>
-            <strong>Code Institute — Diploma in Full Stack Web Development</strong> (2025)
-            <br /><small data-i18n="edu_details">Final grade: Merit · Modules: Frontend (Merit), Interactive (Pass),
-              Backend (Merit), Frameworks (Merit)</small>
-            <div class="hero-actions" style="margin-top:10px">
-              <a class="btn primary" href="assets/documents/code-institute-diploma.pdf" target="_blank" rel="noopener"
-                data-i18n="edu_diploma_btn">View diploma (PDF)</a>
-            </div>
-          </li>
-          <li>
-            <strong>3D-Printing Specialist (YH), Halmstad</strong> (2023–2024)
-            <br /><small data-i18n="edu_note">Interrupted early 2024 due to injury</small>
-          </li>
-        </ul>
-      </div>
+
+      <aside class="hero-profile reveal">
+
+        <div
+          class="profile-label"
+          data-i18n="profile_label"
+        >
+          Current flagship project
+        </div>
+
+        <h2 class="profile-title">
+          AI Assistant
+        </h2>
+
+        <p
+          class="profile-text"
+          data-i18n="profile_text"
+        >
+          A production SaaS platform for creating specialized AI
+          assistants with custom knowledge, public website chat,
+          analytics and integrations.
+        </p>
+
+        <div class="profile-stats">
+
+          <div class="profile-stat">
+            <strong data-i18n="profile_stat_1_title">
+              Production SaaS
+            </strong>
+            <span data-i18n="profile_stat_1_text">
+              Live web application
+            </span>
+          </div>
+
+          <div class="profile-stat">
+            <strong data-i18n="profile_stat_2_title">
+              Full Stack
+            </strong>
+            <span data-i18n="profile_stat_2_text">
+              Frontend to deployment
+            </span>
+          </div>
+
+          <div class="profile-stat">
+            <strong data-i18n="profile_stat_3_title">
+              AI & RAG
+            </strong>
+            <span data-i18n="profile_stat_3_text">
+              Custom knowledge
+            </span>
+          </div>
+
+          <div class="profile-stat">
+            <strong data-i18n="profile_stat_4_title">
+              Integrations
+            </strong>
+            <span data-i18n="profile_stat_4_text">
+              Stripe · Discord · API
+            </span>
+          </div>
+
+        </div>
+
+      </aside>
+
     </div>
   </header>
 
-  <!-- PROJECTS -->
-  <section id="projects" aria-labelledby="projects-title">
-    <h2 id="projects-title" data-i18n="projects_title">Projects</h2>
-    <p class="sub" data-i18n="projects_sub">Validated by Code Institute examiners · Links to GitHub & live demos</p>
+  <!-- ==================================================
+       ABOUT
+  =================================================== -->
 
-    <div class="grid" role="list">
-      <!-- PrintNest -->
-      <article class="card reveal" role="listitem">
-        <img loading="lazy" src="assets/images/printnest.jpg" alt="Screenshot of PrintNest 3D printing website"
-          onerror="this.src='https://picsum.photos/800/400?1'" />
-        <div class="body">
-          <h3>PrintNest (3D Printing Website)</h3>
-          <p data-i18n="p1_desc">Multilingual responsive single-page site with dynamic language switching (EN/SV).</p>
-          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
-              class="chip">JavaScript</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/God-zil-la/my-first-project" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://god-zil-la.github.io/my-first-project/" target="_blank" rel="noopener noreferrer"
-            data-i18n="live_demo">Live Demo</a>
-        </div>
-      </article>
+  <section id="about">
+    <div class="container">
 
-      <!-- Memory Game -->
-      <article class="card reveal" role="listitem">
-        <img loading="lazy" src="assets/images/memory-game.jpg" alt="Screenshot of Memory Game"
-          onerror="this.src='https://picsum.photos/800/400?2'" />
-        <div class="body">
-          <h3>Memory Game</h3>
-          <p data-i18n="p2_desc">Interactive card-matching game for the browser. Mobile-friendly.</p>
-          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
-              class="chip">JavaScript</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/God-zil-la/Memory-Game" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://god-zil-la.github.io/Memory-Game/" target="_blank" rel="noopener noreferrer"
-            data-i18n="live_demo">Live Demo</a>
-        </div>
-      </article>
+      <div class="section-header reveal">
 
-      <!-- Event Planner -->
-      <article class="card reveal" role="listitem">
-        <img loading="lazy" src="assets/images/event-planner.jpg" alt="Screenshot of Event Planner Django app"
-          onerror="this.src='https://picsum.photos/800/400?3'" />
-        <div class="body">
-          <h3>Event Planner (Django)</h3>
-          <p data-i18n="p3_desc">CRUD event app with authentication and Google Calendar sync.</p>
-          <div class="stack"><span class="chip">Python</span><span class="chip">Django</span><span
-              class="chip">PostgreSQL</span></div>
+        <div
+          class="eyebrow"
+          data-i18n="about_eyebrow"
+        >
+          About me
         </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/God-zil-la/project3" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://event-planner-live-619e438f027c.herokuapp.com/" target="_blank"
-            rel="noopener noreferrer" data-i18n="live_demo">Live Demo (Login)</a>
-        </div>
-      </article>
 
-      <!-- AI Assistant Platform -->
-      <article class="card reveal" role="listitem">
-        <img loading="lazy" src="assets/images/ai-assistant.jpg" alt="Screenshot of AI Assistant Platform"
-          onerror="this.src='https://picsum.photos/800/400?4'" />
-        <div class="body">
-          <h3>AI Assistant Platform</h3>
-          <p data-i18n="p4_desc">SaaS app with OpenAI, Stripe subscriptions, analytics dashboard & Discord bot.</p>
-          <div class="stack"><span class="chip">Python</span><span class="chip">Django</span><span
-              class="chip">Stripe</span><span class="chip">OpenAI</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/God-zil-la/Project-4" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://ai-assistants-8c06fcfeab86-6fbe77963620.herokuapp.com/" target="_blank"
-            rel="noopener noreferrer" data-i18n="live_demo">Live Demo</a>
-        </div>
-      </article>
+        <h2 data-i18n="about_title">
+          From idea to working product.
+        </h2>
 
-      <!-- Portfolio site -->
-      <article class="card reveal" role="listitem">
-        <img loading="lazy" src="assets/images/portfolio.jpg" alt="Screenshot of portfolio website"
-          onerror="this.src='https://picsum.photos/800/400?5'" />
-        <div class="body">
-          <h3>Developer Portfolio</h3>
-          <p data-i18n="p5_desc">Personal portfolio with projects, skills and contact. This site!</p>
-          <div class="stack"><span class="chip">HTML</span><span class="chip">CSS</span><span
-              class="chip">JavaScript</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/God-zil-la/portfolio" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://god-zil-la.github.io/portfolio/" target="_blank" rel="noopener noreferrer"
-            data-i18n="view_this">Live Demo</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" aria-labelledby="skills-title">
-    <h2 id="skills-title" data-i18n="skills_title">Skills</h2>
-    <div class="skills">
-      <span class="chip">Python</span><span class="chip">Django</span><span class="chip">Flask</span><span
-        class="chip">JavaScript</span>
-      <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">SQL</span><span class="chip">Git &
-        GitHub</span>
-      <span class="chip">REST APIs</span><span class="chip">Responsive Design</span><span class="chip">Stripe</span>
-      <span class="chip">OpenAI</span><span class="chip">Testing</span><span class="chip">Accessibility</span>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title" data-i18n="contact_title">Get in touch</h2>
-    <div class="contact">
-      <div class="panel reveal">
-        <p class="sub" data-i18n="contact_sub">The fastest way to reach me is via email or LinkedIn.</p>
-        <div class="list">
-          <a href="mailto:shan_elali@hotmail.com">📧 shan_elali@hotmail.com</a>
-          <a href="tel:+46704559169">📱 +46 70 455 91 69</a>
-          <a href="https://linkedin.com/in/hussein-elali" target="_blank" rel="noopener noreferrer">🔗
-            linkedin.com/in/hussein-elali</a>
-          <a href="https://github.com/God-zil-la" target="_blank" rel="noopener noreferrer">💻 github.com/God-zil-la</a>
-        </div>
-      </div>
-
-      <div class="panel reveal">
-        <p class="sub" data-i18n="cv_hint">
-          Need a CV? Download the English & Swedish versions below or find them on my LinkedIn Featured.
+        <p
+          class="section-description"
+          data-i18n="about_intro"
+        >
+          I enjoy working across the entire development process:
+          planning, interface design, backend logic, APIs, testing
+          and deployment.
         </p>
 
-        <div class="list">
-          <!-- CV-länkar -->
-          <div>
-            <a class="btn primary" href="assets/cv/cv-en.pdf" download>Download CV (EN)</a>
-            <a class="btn" href="assets/cv/cv-sv.pdf" download>Download CV (SV)</a>
-          </div>
-
-          <!-- Cover letter-länkar -->
-          <div style="margin-top:12px">
-            <a class="btn primary" href="assets/documents/cover-letter.pdf" download>
-              Download Cover Letter (EN)
-            </a>
-            <a class="btn" href="assets/documents/personligt-brev.pdf" download>
-              Ladda ner Personligt Brev (SV)
-            </a>
-          </div>
-
-          <!-- Diplom -->
-          <div>
-            <a class="btn" href="assets/documents/code-institute-diploma.pdf" download data-i18n="edu_diploma_btn">
-              View diploma (PDF)
-            </a>
-          </div>
-
-          <!-- Info -->
-          <span>📍 Lund, Sweden</span>
-          <span>🚘 A & B Driving License (BE in progress)</span>
-          <span>🌐 Swedish · English · Arabic</span>
-        </div>
       </div>
+
+      <div class="about-grid">
+
+        <div class="panel about-copy reveal">
+
+          <p data-i18n="about_p1">
+            I’m a full-stack developer based in Lund, Sweden. My
+            focus is practical software: applications that solve a
+            real problem and are built to be used rather than simply
+            demonstrated.
+          </p>
+
+          <p data-i18n="about_p2">
+            My main project, AI Assistant, has taken me through the
+            full product lifecycle — from Django architecture and
+            AI integration to subscriptions, analytics, public
+            chatbot functionality, mobile development, testing,
+            deployment and production operations.
+          </p>
+
+          <p data-i18n="about_p3">
+            I’m particularly interested in Python/Django,
+            JavaScript, React, APIs and AI-powered products, while
+            continuing to expand my frontend and full-stack
+            development skills.
+          </p>
+
+        </div>
+
+        <div class="panel reveal">
+
+          <div
+            class="eyebrow"
+            data-i18n="education_eyebrow"
+          >
+            Education
+          </div>
+
+          <div class="education-list">
+
+            <div class="education-item">
+
+              <strong>
+                Code Institute — Diploma in Full Stack Web Development
+              </strong>
+
+              <span data-i18n="education_ci">
+                2025 · Final grade: Merit · Frontend, JavaScript,
+                Python/Django, databases, testing and full-stack
+                application development.
+              </span>
+
+              <div style="margin-top: 14px">
+                <a
+                  class="btn"
+                  href="assets/documents/code-institute-diploma.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="education_diploma"
+                >
+                  View diploma
+                </a>
+              </div>
+
+            </div>
+
+            <div class="education-item">
+
+              <strong>
+                3D-Printing Specialist (YH), Halmstad
+              </strong>
+
+              <span data-i18n="education_3d">
+                2023–2024 · Technical studies in additive
+                manufacturing.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
+  <!-- ==================================================
+       PROJECTS
+  =================================================== -->
+
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div
+          class="eyebrow"
+          data-i18n="projects_eyebrow"
+        >
+          Selected work
+        </div>
+
+        <h2 data-i18n="projects_title">
+          Projects I've built.
+        </h2>
+
+        <p
+          class="section-description"
+          data-i18n="projects_intro"
+        >
+          A selection of production work and development projects,
+          from a complete AI SaaS platform to Django applications
+          and interactive frontend projects.
+        </p>
+
+      </div>
+
+      <!-- ============================
+           FEATURED: AI ASSISTANT
+      ============================= -->
+
+      <article class="featured-project reveal">
+
+        <div class="featured-project-grid">
+
+          <div class="featured-content">
+
+            <div
+              class="featured-badge"
+              data-i18n="ai_badge"
+            >
+              Featured · Production SaaS
+            </div>
+
+            <h3>
+              AI Assistant
+            </h3>
+
+            <p data-i18n="ai_description">
+              A full-stack SaaS platform that lets individuals and
+              businesses create specialized AI assistants, add their
+              own knowledge, manage conversations, analyze usage and
+              publish assistants through a website widget and public
+              chatbot.
+            </p>
+
+            <ul class="feature-list">
+
+              <li data-i18n="ai_feature_1">
+                Custom AI assistants
+              </li>
+
+              <li data-i18n="ai_feature_2">
+                Knowledge Base / RAG
+              </li>
+
+              <li data-i18n="ai_feature_3">
+                Website widget & public chatbot
+              </li>
+
+              <li data-i18n="ai_feature_4">
+                Multilingual conversations
+              </li>
+
+              <li data-i18n="ai_feature_5">
+                Analytics dashboard
+              </li>
+
+              <li data-i18n="ai_feature_6">
+                Discord integration
+              </li>
+
+              <li data-i18n="ai_feature_7">
+                REST API
+              </li>
+
+              <li data-i18n="ai_feature_8">
+                Stripe subscriptions
+              </li>
+
+            </ul>
+
+            <div class="featured-stack">
+
+              <span class="chip chip-gold">Python</span>
+              <span class="chip chip-gold">Django</span>
+              <span class="chip chip-gold">PostgreSQL</span>
+              <span class="chip chip-gold">OpenAI</span>
+              <span class="chip chip-gold">RAG</span>
+              <span class="chip chip-gold">REST API</span>
+              <span class="chip chip-gold">Stripe</span>
+              <span class="chip chip-gold">JavaScript</span>
+              <span class="chip chip-gold">React Native</span>
+              <span class="chip chip-gold">Heroku</span>
+
+            </div>
+
+            <div class="project-actions">
+
+              <a
+                class="btn btn-primary"
+                href="https://www.myaiassistantapp.se/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="visit_product"
+              >
+                Visit live product ↗
+              </a>
+
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/God-zil-la/Project-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="featured-visual">
+
+            <img
+              src="assets/images/ai-assistant.jpg"
+              alt="AI Assistant SaaS web application"
+              onerror="
+                this.style.display='none';
+                this.nextElementSibling.style.display='flex';
+              "
+            />
+
+            <div class="featured-fallback">
+              AI Assistant<br />
+              Production SaaS Platform
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- ============================
+           MORE PROJECTS
+      ============================= -->
+
+      <div style="height: 34px"></div>
+
+      <div class="projects-grid">
+
+        <!-- EVENT PLANNER -->
+
+        <article class="project-card reveal">
+
+          <div class="project-image">
+            <img
+              loading="lazy"
+              src="assets/images/event-planner.jpg"
+              alt="Event Planner Django application"
+            />
+          </div>
+
+          <div class="project-body">
+
+            <h3>
+              Event Planner
+            </h3>
+
+            <p data-i18n="event_desc">
+              Full-stack Django application for creating and
+              managing events with authentication, CRUD
+              functionality, PostgreSQL and Google Calendar
+              integration.
+            </p>
+
+            <div class="stack">
+              <span class="chip">Python</span>
+              <span class="chip">Django</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Google Calendar</span>
+            </div>
+
+          </div>
+
+          <div class="project-actions">
+
+            <a
+              class="btn"
+              href="https://github.com/God-zil-la/project3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="btn"
+              href="https://event-planner-live-619e438f027c.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="live_demo"
+            >
+              Live demo ↗
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- MEMORY GAME -->
+
+        <article class="project-card reveal">
+
+          <div class="project-image">
+            <img
+              loading="lazy"
+              src="assets/images/memory-game.jpg"
+              alt="Memory Game web application"
+            />
+          </div>
+
+          <div class="project-body">
+
+            <h3>
+              Memory Game
+            </h3>
+
+            <p data-i18n="memory_desc">
+              Responsive browser game built with JavaScript,
+              featuring multiple board sizes and a Firebase-backed
+              best-time system.
+            </p>
+
+            <div class="stack">
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">Firebase</span>
+            </div>
+
+          </div>
+
+          <div class="project-actions">
+
+            <a
+              class="btn"
+              href="https://github.com/God-zil-la/Memory-Game"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="btn"
+              href="https://god-zil-la.github.io/Memory-Game/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="live_demo"
+            >
+              Live demo ↗
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- PRINTNEST -->
+
+        <article class="project-card reveal">
+
+          <div class="project-image">
+            <img
+              loading="lazy"
+              src="assets/images/printnest.jpg"
+              alt="PrintNest 3D printing website"
+            />
+          </div>
+
+          <div class="project-body">
+
+            <h3>
+              PrintNest
+            </h3>
+
+            <p data-i18n="printnest_desc">
+              Responsive 3D-printing website with a custom
+              interface and dynamic Swedish/English language
+              switching.
+            </p>
+
+            <div class="stack">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive Design</span>
+            </div>
+
+          </div>
+
+          <div class="project-actions">
+
+            <a
+              class="btn"
+              href="https://github.com/God-zil-la/my-first-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="btn"
+              href="https://god-zil-la.github.io/my-first-project/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="live_demo"
+            >
+              Live demo ↗
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- PORTFOLIO -->
+
+        <article class="project-card reveal">
+
+          <div class="project-image">
+            <img
+              loading="lazy"
+              src="assets/images/portfolio.jpg"
+              alt="Hussein Elali developer portfolio"
+            />
+          </div>
+
+          <div class="project-body">
+
+            <h3 data-i18n="portfolio_title">
+              Developer Portfolio
+            </h3>
+
+            <p data-i18n="portfolio_desc">
+              Personal developer portfolio designed to present
+              production work, technical skills, education and
+              contact information in English and Swedish.
+            </p>
+
+            <div class="stack">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Accessibility</span>
+            </div>
+
+          </div>
+
+          <div class="project-actions">
+
+            <a
+              class="btn"
+              href="https://github.com/God-zil-la/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              class="btn"
+              href="https://god-zil-la.github.io/portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="view_site"
+            >
+              View site ↗
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       SKILLS
+  =================================================== -->
+
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div
+          class="eyebrow"
+          data-i18n="skills_eyebrow"
+        >
+          Technical skills
+        </div>
+
+        <h2 data-i18n="skills_title">
+          Technologies I work with.
+        </h2>
+
+        <p
+          class="section-description"
+          data-i18n="skills_intro"
+        >
+          My experience covers backend development, frontend
+          interfaces, databases, APIs, AI integrations, testing and
+          production deployment.
+        </p>
+
+      </div>
+
+      <div class="skills-layout">
+
+        <div class="skill-group reveal">
+
+          <h3 data-i18n="skills_backend">
+            Backend & Data
+          </h3>
+
+          <div class="skills">
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">Flask</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">SQL</span>
+            <span class="chip">REST APIs</span>
+          </div>
+
+        </div>
+
+        <div class="skill-group reveal">
+
+          <h3 data-i18n="skills_frontend">
+            Frontend & Mobile
+          </h3>
+
+          <div class="skills">
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">React Native</span>
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">Responsive Design</span>
+          </div>
+
+        </div>
+
+        <div class="skill-group reveal">
+
+          <h3 data-i18n="skills_product">
+            AI, Product & Delivery
+          </h3>
+
+          <div class="skills">
+            <span class="chip">OpenAI</span>
+            <span class="chip">RAG</span>
+            <span class="chip">Stripe</span>
+            <span class="chip">Git & GitHub</span>
+            <span class="chip">Heroku</span>
+            <span class="chip">Testing</span>
+            <span class="chip">Accessibility</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       CONTACT
+  =================================================== -->
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-shell reveal">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            data-i18n="contact_eyebrow"
+          >
+            Get in touch
+          </div>
+
+          <h2 data-i18n="contact_title">
+            Let's build something useful.
+          </h2>
+
+          <p data-i18n="contact_text">
+            I'm interested in full-stack and web development
+            opportunities where I can contribute, keep learning and
+            work on products that solve real problems.
+          </p>
+
+          <div class="contact-details">
+
+            <a href="mailto:shan_elali@hotmail.com">
+              shan_elali@hotmail.com
+            </a>
+
+            <a href="tel:+46704559169">
+              +46 70 455 91 69
+            </a>
+
+            <span>
+              Lund, Sweden
+            </span>
+
+          </div>
+
+          <div class="downloads">
+
+            <a
+              class="btn"
+              href="assets/cv/cv-en.pdf"
+              download
+            >
+              CV — English
+            </a>
+
+            <a
+              class="btn"
+              href="assets/cv/cv-sv.pdf"
+              download
+            >
+              CV — Svenska
+            </a>
+
+            <a
+              class="btn"
+              href="assets/documents/code-institute-diploma.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="education_diploma"
+            >
+              View diploma
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="contact-actions">
+
+          <a
+            class="btn btn-primary"
+            href="mailto:shan_elali@hotmail.com"
+            data-i18n="contact_email"
+          >
+            Send email
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://linkedin.com/in/hussein-elali"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/God-zil-la"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================================
+       FOOTER
+  =================================================== -->
+
   <footer>
-    © <span id="year"></span> Hussein Elali · Built with HTML/CSS/JS · Theme: black & gold
+    © <span id="year"></span>
+    Hussein Elali · Full-Stack Developer
   </footer>
 
-  <!-- Back to top -->
-  <button id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑ Top</button>
+  <button
+    id="toTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+  <!-- ==================================================
+       JAVASCRIPT
+  =================================================== -->
 
   <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const translations = {
 
-    // i18n dictionary
-    const dict = {
       en: {
-        nav_about: 'About', nav_projects: 'Projects', nav_skills: 'Skills', nav_contact: 'Contact',
-        kicker: 'Full-Stack Web Developer',
-        lead: 'Diploma in Full Stack Web Development (Code Institute, final grade: Merit). I build responsive, scalable apps with Python (Django/Flask), JavaScript, and SQL. Projects validated by Code Institute examiners.',
-        view_projects: 'View projects',
-        about_title: 'About',
-        about_body: "I’m a hands-on developer with a strong technical service background. I like building practical solutions: event apps, AI-assisted tools, and clean user interfaces. I learn fast, adapt quickly, and enjoy shipping real features.",
-        edu_title: 'Education',
-        edu_details: 'Final grade: Merit · Modules: Frontend (Merit), Interactive (Pass), Backend (Merit), Frameworks (Merit)',
-        edu_diploma_btn: 'View diploma (PDF)',
-        edu_note: 'Interrupted early 2024 due to injury',
-        projects_title: 'Projects', projects_sub: 'Validated by Code Institute examiners · Links to GitHub & live demos',
-        p1_desc: 'Multilingual responsive single-page site with dynamic language switching (EN/SV).',
-        p2_desc: 'Interactive card-matching game for the browser. Mobile-friendly.',
-        p3_desc: 'CRUD event app with authentication and Google Calendar sync.',
-        p4_desc: 'SaaS app with OpenAI, Stripe subscriptions, analytics dashboard & Discord bot.',
-        p5_desc: 'Personal portfolio with projects, skills and contact. This site!',
-        live_demo: 'Live Demo', live_soon: 'Live soon', view_this: 'Back to top',
-        skills_title: 'Skills',
-        contact_title: 'Get in touch', contact_sub: 'The fastest way to reach me is via email or LinkedIn.',
-        cv_hint: 'Need a CV? Download the English & Swedish versions from LinkedIn Featured or contact me.'
+
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_skills: "Skills",
+        nav_contact: "Contact",
+
+        hero_eyebrow: "Full-Stack Developer",
+        hero_title: "I build products for the real world.",
+
+        hero_lead:
+          "Full-stack developer focused on building production-ready web applications, SaaS platforms and AI-powered products with Python, Django, JavaScript, React and modern APIs.",
+
+        hero_projects: "Explore my work",
+
+        hero_location: "Lund, Sweden",
+        hero_languages: "Swedish · English · Arabic",
+        hero_focus: "Full Stack · SaaS · AI",
+
+        profile_label: "Current flagship project",
+
+        profile_text:
+          "A production SaaS platform for creating specialized AI assistants with custom knowledge, public website chat, analytics and integrations.",
+
+        profile_stat_1_title: "Production SaaS",
+        profile_stat_1_text: "Live web application",
+
+        profile_stat_2_title: "Full Stack",
+        profile_stat_2_text: "Frontend to deployment",
+
+        profile_stat_3_title: "AI & RAG",
+        profile_stat_3_text: "Custom knowledge",
+
+        profile_stat_4_title: "Integrations",
+        profile_stat_4_text: "Stripe · Discord · API",
+
+        about_eyebrow: "About me",
+        about_title: "From idea to working product.",
+
+        about_intro:
+          "I enjoy working across the entire development process: planning, interface design, backend logic, APIs, testing and deployment.",
+
+        about_p1:
+          "I’m a full-stack developer based in Lund, Sweden. My focus is practical software: applications that solve a real problem and are built to be used rather than simply demonstrated.",
+
+        about_p2:
+          "My main project, AI Assistant, has taken me through the full product lifecycle — from Django architecture and AI integration to subscriptions, analytics, public chatbot functionality, mobile development, testing, deployment and production operations.",
+
+        about_p3:
+          "I’m particularly interested in Python/Django, JavaScript, React, APIs and AI-powered products, while continuing to expand my frontend and full-stack development skills.",
+
+        education_eyebrow: "Education",
+
+        education_ci:
+          "2025 · Final grade: Merit · Frontend, JavaScript, Python/Django, databases, testing and full-stack application development.",
+
+        education_diploma: "View diploma",
+
+        education_3d:
+          "2023–2024 · Technical studies in additive manufacturing.",
+
+        projects_eyebrow: "Selected work",
+        projects_title: "Projects I've built.",
+
+        projects_intro:
+          "A selection of production work and development projects, from a complete AI SaaS platform to Django applications and interactive frontend projects.",
+
+        ai_badge: "Featured · Production SaaS",
+
+        ai_description:
+          "A full-stack SaaS platform that lets individuals and businesses create specialized AI assistants, add their own knowledge, manage conversations, analyze usage and publish assistants through a website widget and public chatbot.",
+
+        ai_feature_1: "Custom AI assistants",
+        ai_feature_2: "Knowledge Base / RAG",
+        ai_feature_3: "Website widget & public chatbot",
+        ai_feature_4: "Multilingual conversations",
+        ai_feature_5: "Analytics dashboard",
+        ai_feature_6: "Discord integration",
+        ai_feature_7: "REST API",
+        ai_feature_8: "Stripe subscriptions",
+
+        visit_product: "Visit live product ↗",
+
+        event_desc:
+          "Full-stack Django application for creating and managing events with authentication, CRUD functionality, PostgreSQL and Google Calendar integration.",
+
+        memory_desc:
+          "Responsive browser game built with JavaScript, featuring multiple board sizes and a Firebase-backed best-time system.",
+
+        printnest_desc:
+          "Responsive 3D-printing website with a custom interface and dynamic Swedish/English language switching.",
+
+        portfolio_title: "Developer Portfolio",
+
+        portfolio_desc:
+          "Personal developer portfolio designed to present production work, technical skills, education and contact information in English and Swedish.",
+
+        live_demo: "Live demo ↗",
+        view_site: "View site ↗",
+
+        skills_eyebrow: "Technical skills",
+        skills_title: "Technologies I work with.",
+
+        skills_intro:
+          "My experience covers backend development, frontend interfaces, databases, APIs, AI integrations, testing and production deployment.",
+
+        skills_backend: "Backend & Data",
+        skills_frontend: "Frontend & Mobile",
+        skills_product: "AI, Product & Delivery",
+
+        contact_eyebrow: "Get in touch",
+        contact_title: "Let's build something useful.",
+
+        contact_text:
+          "I'm interested in full-stack and web development opportunities where I can contribute, keep learning and work on products that solve real problems.",
+
+        contact_email: "Send email"
       },
+
       sv: {
-        nav_about: 'Om', nav_projects: 'Projekt', nav_skills: 'Färdigheter', nav_contact: 'Kontakt',
-        kicker: 'Fullstack webbutvecklare',
-        lead: 'Diplom i Fullstack Webbutveckling (Code Institute, slutbetyg: Merit). Jag bygger responsiva, skalbara appar med Python (Django/Flask), JavaScript och SQL. Projekt validerade av Code Institute.',
-        view_projects: 'Se projekt',
-        about_title: 'Om',
-        about_body: 'Jag är en lösningsorienterad utvecklare med erfarenhet från teknisk service. Mitt fokus ligger på funktionella och användarvänliga system, exempelvis eventapplikationer och AI-drivna verktyg. Jag har hög inlärningsförmåga, är flexibel och leveranssäker.',
-        edu_title: 'Utbildning',
-        edu_details: 'Slutbetyg: Merit · Moduler: Frontend (Merit), Interaktiv (Godkänd), Backend (Merit), Frameworks (Merit)',
-        edu_diploma_btn: 'Visa diplom (PDF)',
-        edu_note: 'Avbruten tidigt 2024 p.g.a. skada',
-        projects_title: 'Projekt', projects_sub: 'Validerade av Code Institutes examinatorer · Länkar till GitHub & live-demo',
-        p1_desc: 'Flerspråkig responsiv enkel sida med dynamiskt språkbyte (SV/EN).',
-        p2_desc: 'Interaktivt memoryspel i webbläsaren. Mobilvänligt.',
-        p3_desc: 'CRUD-app för event med autentisering och Google Kalender-synk.',
-        p4_desc: 'SaaS-app med OpenAI, Stripe-prenumerationer, analysdashboard & Discord-bot.',
-        p5_desc: 'Personlig portfolio med projekt, färdigheter och kontakt. Denna sida!',
-        live_demo: 'Live-demo', live_soon: 'Kommer snart', view_this: 'Till toppen',
-        skills_title: 'Färdigheter',
-        contact_title: 'Kontakta mig', contact_sub: 'Snabbast är via e-post eller LinkedIn.',
-        cv_hint: 'Behöver du mitt CV? Ladda ner engelsk & svensk version via LinkedIn Featured eller kontakta mig.'
+
+        nav_about: "Om",
+        nav_projects: "Projekt",
+        nav_skills: "Kompetens",
+        nav_contact: "Kontakt",
+
+        hero_eyebrow: "Fullstackutvecklare",
+        hero_title: "Jag bygger produkter för verkligheten.",
+
+        hero_lead:
+          "Fullstackutvecklare med fokus på produktionsklara webbapplikationer, SaaS-plattformar och AI-drivna produkter med Python, Django, JavaScript, React och moderna API:er.",
+
+        hero_projects: "Se mina projekt",
+
+        hero_location: "Lund, Sverige",
+        hero_languages: "Svenska · Engelska · Arabiska",
+        hero_focus: "Fullstack · SaaS · AI",
+
+        profile_label: "Nuvarande huvudprojekt",
+
+        profile_text:
+          "En SaaS-plattform i produktion för att skapa specialiserade AI-assistenter med egen kunskap, publik webbchatt, analys och integrationer.",
+
+        profile_stat_1_title: "SaaS i produktion",
+        profile_stat_1_text: "Live webbapplikation",
+
+        profile_stat_2_title: "Fullstack",
+        profile_stat_2_text: "Frontend till driftsättning",
+
+        profile_stat_3_title: "AI & RAG",
+        profile_stat_3_text: "Egen kunskapsbas",
+
+        profile_stat_4_title: "Integrationer",
+        profile_stat_4_text: "Stripe · Discord · API",
+
+        about_eyebrow: "Om mig",
+        about_title: "Från idé till fungerande produkt.",
+
+        about_intro:
+          "Jag tycker om att arbeta genom hela utvecklingsprocessen: planering, gränssnitt, backendlogik, API:er, testning och driftsättning.",
+
+        about_p1:
+          "Jag är fullstackutvecklare baserad i Lund. Mitt fokus ligger på praktisk mjukvara: applikationer som löser verkliga problem och är byggda för att användas, inte bara demonstreras.",
+
+        about_p2:
+          "Mitt huvudprojekt AI Assistant har gett mig erfarenhet av hela produktlivscykeln — från Django-arkitektur och AI-integration till prenumerationer, analys, publik chatbot, mobilutveckling, testning, driftsättning och drift i produktion.",
+
+        about_p3:
+          "Jag är särskilt intresserad av Python/Django, JavaScript, React, API:er och AI-drivna produkter samtidigt som jag fortsätter utveckla mina kunskaper inom frontend och fullstackutveckling.",
+
+        education_eyebrow: "Utbildning",
+
+        education_ci:
+          "2025 · Slutbetyg: Merit · Frontend, JavaScript, Python/Django, databaser, testning och fullstackutveckling.",
+
+        education_diploma: "Visa diplom",
+
+        education_3d:
+          "2023–2024 · Tekniska studier inom additiv tillverkning.",
+
+        projects_eyebrow: "Utvalda projekt",
+        projects_title: "Projekt jag har byggt.",
+
+        projects_intro:
+          "Ett urval av produktionsarbete och utvecklingsprojekt, från en komplett AI-SaaS-plattform till Django-applikationer och interaktiva frontendprojekt.",
+
+        ai_badge: "Huvudprojekt · SaaS i produktion",
+
+        ai_description:
+          "En fullstack SaaS-plattform där privatpersoner och företag kan skapa specialiserade AI-assistenter, lägga till egen kunskap, hantera konversationer, analysera användning och publicera assistenter via webbwidget och publik chatbot.",
+
+        ai_feature_1: "Anpassade AI-assistenter",
+        ai_feature_2: "Knowledge Base / RAG",
+        ai_feature_3: "Webbwidget & publik chatbot",
+        ai_feature_4: "Flerspråkiga konversationer",
+        ai_feature_5: "Analysdashboard",
+        ai_feature_6: "Discord-integration",
+        ai_feature_7: "REST API",
+        ai_feature_8: "Stripe-prenumerationer",
+
+        visit_product: "Besök liveprodukten ↗",
+
+        event_desc:
+          "Fullstack Django-applikation för att skapa och hantera event med autentisering, CRUD-funktionalitet, PostgreSQL och Google Kalender-integration.",
+
+        memory_desc:
+          "Responsivt webbläsarspel byggt med JavaScript, flera spelstorlekar och ett Firebase-baserat system för bästa tider.",
+
+        printnest_desc:
+          "Responsiv webbplats för 3D-printing med eget gränssnitt och dynamiskt språkbyte mellan svenska och engelska.",
+
+        portfolio_title: "Utvecklarportfolio",
+
+        portfolio_desc:
+          "Personlig utvecklarportfolio skapad för att presentera produktionsarbete, tekniska kunskaper, utbildning och kontaktinformation på svenska och engelska.",
+
+        live_demo: "Live-demo ↗",
+        view_site: "Visa sidan ↗",
+
+        skills_eyebrow: "Teknisk kompetens",
+        skills_title: "Tekniker jag arbetar med.",
+
+        skills_intro:
+          "Min erfarenhet omfattar backendutveckling, frontendgränssnitt, databaser, API:er, AI-integrationer, testning och driftsättning i produktion.",
+
+        skills_backend: "Backend & Data",
+        skills_frontend: "Frontend & Mobil",
+        skills_product: "AI, Produkt & Leverans",
+
+        contact_eyebrow: "Kontakt",
+        contact_title: "Låt oss bygga något användbart.",
+
+        contact_text:
+          "Jag är intresserad av möjligheter inom fullstack- och webbutveckling där jag kan bidra, fortsätta utvecklas och arbeta med produkter som löser verkliga problem.",
+
+        contact_email: "Skicka e-post"
       }
     };
 
-    // language switcher
-    function setLang(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const k = el.getAttribute('data-i18n');
-        if (dict[lang][k]) el.textContent = dict[lang][k];
-      });
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-sv').classList.toggle('active', lang === 'sv');
-      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
-      document.getElementById('btn-sv').setAttribute('aria-pressed', lang === 'sv');
-      localStorage.setItem('lang', lang);
+    /* --------------------------------------------------
+       LANGUAGE
+    -------------------------------------------------- */
+
+    function setLanguage(lang) {
+
+      document.documentElement.lang = lang;
+
+      document
+        .querySelectorAll("[data-i18n]")
+        .forEach((element) => {
+
+          const key =
+            element.getAttribute("data-i18n");
+
+          if (translations[lang][key]) {
+            element.textContent =
+              translations[lang][key];
+          }
+        });
+
+      const enButton =
+        document.getElementById("btn-en");
+
+      const svButton =
+        document.getElementById("btn-sv");
+
+      enButton.classList.toggle(
+        "active",
+        lang === "en"
+      );
+
+      svButton.classList.toggle(
+        "active",
+        lang === "sv"
+      );
+
+      enButton.setAttribute(
+        "aria-pressed",
+        lang === "en"
+      );
+
+      svButton.setAttribute(
+        "aria-pressed",
+        lang === "sv"
+      );
+
+      localStorage.setItem(
+        "portfolio-language",
+        lang
+      );
     }
-    document.getElementById('btn-en').addEventListener('click', () => setLang('en'));
-    document.getElementById('btn-sv').addEventListener('click', () => setLang('sv'));
-    setLang(localStorage.getItem('lang') || 'en');
 
-    // Enhancements
-    const nav = document.querySelector('.nav');
-    const toTop = document.getElementById('toTop');
-    const onScroll = () => {
-      const y = window.scrollY || document.documentElement.scrollTop;
-      nav.classList.toggle('scrolled', y > 10);
-      toTop.classList.toggle('show', y > 600);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    document
+      .getElementById("btn-en")
+      .addEventListener(
+        "click",
+        () => setLanguage("en")
+      );
 
-    // Active nav highlighting
-    const sections = ['about', 'projects', 'skills', 'contact'];
-    const links = [...document.querySelectorAll('.links a')];
-    const linkFor = id => links.find(a => a.getAttribute('href') === '#' + id);
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.id;
-        if (!id) return;
-        const link = linkFor(id);
-        if (!link) return;
-        if (entry.isIntersecting) {
-          links.forEach(a => a.classList.remove('active'));
-          link.classList.add('active');
-          history.replaceState(null, '', '#' + id);
+    document
+      .getElementById("btn-sv")
+      .addEventListener(
+        "click",
+        () => setLanguage("sv")
+      );
+
+    const storedLanguage =
+      localStorage.getItem(
+        "portfolio-language"
+      ) || "en";
+
+    setLanguage(storedLanguage);
+
+    /* --------------------------------------------------
+       CURRENT YEAR
+    -------------------------------------------------- */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+    /* --------------------------------------------------
+       NAV + BACK TO TOP
+    -------------------------------------------------- */
+
+    const nav =
+      document.querySelector(".nav");
+
+    const toTop =
+      document.getElementById("toTop");
+
+    function handleScroll() {
+
+      const scrollY =
+        window.scrollY ||
+        document.documentElement.scrollTop;
+
+      nav.classList.toggle(
+        "scrolled",
+        scrollY > 10
+      );
+
+      toTop.classList.toggle(
+        "show",
+        scrollY > 650
+      );
+    }
+
+    window.addEventListener(
+      "scroll",
+      handleScroll,
+      { passive: true }
+    );
+
+    handleScroll();
+
+    toTop.addEventListener(
+      "click",
+      () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+    /* --------------------------------------------------
+       ACTIVE NAVIGATION
+    -------------------------------------------------- */
+
+    const sectionIds = [
+      "about",
+      "projects",
+      "skills",
+      "contact"
+    ];
+
+    const navLinks =
+      Array.from(
+        document.querySelectorAll(
+          ".nav-links a"
+        )
+      );
+
+    const navObserver =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              navLinks.forEach(
+                (link) =>
+                  link.classList.remove(
+                    "active"
+                  )
+              );
+
+              const activeLink =
+                navLinks.find(
+                  (link) =>
+                    link.getAttribute(
+                      "href"
+                    ) ===
+                    "#" + entry.target.id
+                );
+
+              if (activeLink) {
+                activeLink.classList.add(
+                  "active"
+                );
+              }
+
+            }
+          );
+
+        },
+
+        {
+          rootMargin:
+            "-35% 0px -55% 0px",
+
+          threshold: 0
         }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    sections.forEach(id => { const el = document.getElementById(id); if (el) sectionObserver.observe(el); });
+      );
 
-    // Reveal-on-scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          obs.unobserve(e.target);
+    sectionIds.forEach(
+      (id) => {
+
+        const section =
+          document.getElementById(id);
+
+        if (section) {
+          navObserver.observe(section);
         }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => revealObs.observe(el));
+
+      }
+    );
+
+    /* --------------------------------------------------
+       REVEAL ANIMATION
+    -------------------------------------------------- */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        (entries, observer) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList.add("in");
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.1
+        }
+      );
+
+    revealElements.forEach(
+      (element) =>
+        revealObserver.observe(
+          element
+        )
+    );
   </script>
-</body>
 
+</body>
 </html>
