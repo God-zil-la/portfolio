@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 2872 >>
+stream
+BT /F2 20 Tf 48 795 Td (HUSSEIN ELALI) Tj ET
+BT /F2 11 Tf 48 770 Td (Junior fullstack- / backendutvecklare) Tj ET
+BT /F1 9 Tf 48 748 Td (Lund, Sweden  |  +46 70 455 91 69  |  shan_elali@hotmail.com) Tj ET
+BT /F1 9 Tf 48 734 Td (linkedin.com/in/hussein-elali  |  github.com/God-zil-la) Tj ET
+BT /F2 13 Tf 48 700 Td (GENERELLT PERSONLIGT BREV) Tj ET
+BT /F1 9.4 Tf 48 669 Td (Hej,) Tj ET
+BT /F1 9.4 Tf 48 644.6 Td (Jag söker juniora tjänster inom fullstack- och backendutveckling. Jag har slutfört Code) Tj ET
+BT /F1 9.4 Tf 48 630.2 Td (Institutes utbildning Full Stack Web Development med betyget Merit och har därefter) Tj ET
+BT /F1 9.4 Tf 48 615.8000000000001 Td (fokuserat på att omsätta mina kunskaper i fungerande programvara för riktiga användare.) Tj ET
+BT /F1 9.4 Tf 48 591.4000000000001 Td (Mitt största projekt är AI Assistant, en SaaS-plattform som jag har byggt med Python,) Tj ET
+BT /F1 9.4 Tf 48 577.0000000000001 Td (Django, PostgreSQL och moderna API-integrationer. Plattformen innehåller AI-baserade) Tj ET
+BT /F1 9.4 Tf 48 562.6000000000001 Td (konversationer, en kunskapsbas med RAG, analys, abonnemang via Stripe,) Tj ET
+BT /F1 9.4 Tf 48 548.2000000000002 Td (Discord-integration och en chatbot som kan bäddas in på webbplatser. Jag har även) Tj ET
+BT /F1 9.4 Tf 48 533.8000000000002 Td (utvecklat en Android-app med React Native och Expo, som lanserades på Google Play i) Tj ET
+BT /F1 9.4 Tf 48 519.4000000000002 Td (oktober 2026.) Tj ET
+BT /F1 9.4 Tf 48 495.0000000000002 Td (Jag arbetar med backendlogik, databaser, integrationer, webbgränssnitt, testning och) Tj ET
+BT /F1 9.4 Tf 48 480.60000000000025 Td (driftsättning. Bland mina övriga projekt finns Django-applikationer och) Tj ET
+BT /F1 9.4 Tf 48 466.2000000000003 Td (JavaScript-baserade lösningar. Att bygga och driva en verklig produkt har gett mig) Tj ET
+BT /F1 9.4 Tf 48 451.8000000000003 Td (värdefull erfarenhet av felsökning, prioriteringar och att lära mig ny teknik när det) Tj ET
+BT /F1 9.4 Tf 48 437.4000000000003 Td (behövs.) Tj ET
+BT /F1 9.4 Tf 48 413.00000000000034 Td (Innan jag började med mjukvaruutveckling arbetade jag under många år inom teknisk) Tj ET
+BT /F1 9.4 Tf 48 398.60000000000036 Td (service. Där lärde jag mig att ta ansvar, lösa problem metodiskt, kommunicera tydligt och) Tj ET
+BT /F1 9.4 Tf 48 384.2000000000004 Td (leverera lösningar som andra kan lita på.) Tj ET
+BT /F1 9.4 Tf 48 359.8000000000004 Td (Jag söker särskilt möjligheter i team med distansarbete där jag kan bidra med Python,) Tj ET
+BT /F1 9.4 Tf 48 345.40000000000043 Td (Django, JavaScript och API:er samtidigt som jag fortsätter utvecklas som programmerare.) Tj ET
+BT /F1 9.4 Tf 48 331.00000000000045 Td (Jag berättar gärna mer om hur jag kan bidra hos er.) Tj ET
+BT /F1 9.4 Tf 48 306.6000000000005 Td (Med vänliga hälsningar,) Tj ET
+BT /F1 9.4 Tf 48 282.2000000000005 Td (Hussein Elali) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000348 00000 n 
+0000000450 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3373
+%%EOF
